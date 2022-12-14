@@ -1,0 +1,457 @@
+<html>
+<head>
+<title>TestNG:  smoke Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>smoke Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Dec 14 00:23:07 GMT 2022</td>
+</tr>
+<tr><td>Total time:</td><td>148 seconds (148385 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>smoke </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nopcommerce.demo.testsuit.TopMenuTest.userShouldNavigateToComputerPageSuccessfully()'><b>userShouldNavigateToComputerPageSuccessfully</b><br>Test class: com.nopcommerce.demo.testsuit.TopMenuTest<br/>
+<a href="#Output-1349872758" onClick='toggleBox("Output-1349872758", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1349872758" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1349872758">
+click on computer page[[ChromeDriver: chrome on WINDOWS (6b5196dc633d912c11b53fe14a109dbe)] -> link text: Computers]<br/>
+Get text from computer page[[ChromeDriver: chrome on WINDOWS (6b5196dc633d912c11b53fe14a109dbe)] -> link text: Computers]<br/>
+Click to see screenshot<br/>
+<a target = "_blank" href=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/userShouldNavigateToComputerPageSuccessfullyWed_Dec_14_00_25_35_GMT_2022.jpg>Screenshot</a><br/>
+<br><br/>
+<br><br/>
+<a target = "_blank" href=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/userShouldNavigateToComputerPageSuccessfullyWed_Dec_14_00_25_35_GMT_2022.jpg><img src=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/userShouldNavigateToComputerPageSuccessfullyWed_Dec_14_00_25_35_GMT_2022.jpg height=200 width=200></img></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=108.0.5359.99)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6b5196dc633d912c11b53fe14a109dbe, getElementText {id=733dd9d9-3080-4b0d-a9ae-a847a87cedfa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55311}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55311/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (6b5196dc633d912c11b53fe14a109dbe)] -&gt; link text: Computers]
+Session ID: 6b5196dc633d912c11b53fe14a109dbe
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:207)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy15.getText(Unknown Source)
+	at com.nopcommerce.demo.utility.Utility.getTextFromElement(Utility.java:62)
+	at com.nopcommerce.demo.pages.ComputerPage.getStringComputer(ComputerPage.java:184)
+	at com.nopcommerce.demo.testsuit.TopMenuTest.userShouldNavigateToComputerPageSuccessfully(TopMenuTest.java:38)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1349872758", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1349872758'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=108.0.5359.99)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6b5196dc633d912c11b53fe14a109dbe, getElementText {id=733dd9d9-3080-4b0d-a9ae-a847a87cedfa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55311}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55311/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (6b5196dc633d912c11b53fe14a109dbe)] -&gt; link text: Computers]
+Session ID: 6b5196dc633d912c11b53fe14a109dbe
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:207)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy15.getText(Unknown Source)
+	at com.nopcommerce.demo.utility.Utility.getTextFromElement(Utility.java:62)
+	at com.nopcommerce.demo.pages.ComputerPage.getStringComputer(ComputerPage.java:184)
+	at com.nopcommerce.demo.testsuit.TopMenuTest.userShouldNavigateToComputerPageSuccessfully(TopMenuTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>com.nopcommerce.demo.testsuit.TopMenuTest@16022d9d</td></tr>
+<tr>
+<td title='com.nopcommerce.demo.testsuit.RegisterMenuTest.verifyUserShouldRegister()'><b>verifyUserShouldRegister</b><br>Test class: com.nopcommerce.demo.testsuit.RegisterMenuTest<br/>
+<a href="#Output-48071225" onClick='toggleBox("Output-48071225", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-48071225" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-48071225">
+Click on genderProxy element for: DefaultElementLocator 'By.id: gender-male'<br/>
+Click to see screenshot<br/>
+<a target = "_blank" href=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/verifyUserShouldRegisterWed_Dec_14_00_25_31_GMT_2022.jpg>Screenshot</a><br/>
+<br><br/>
+<br><br/>
+<a target = "_blank" href=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/verifyUserShouldRegisterWed_Dec_14_00_25_31_GMT_2022.jpg><img src=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/verifyUserShouldRegisterWed_Dec_14_00_25_31_GMT_2022.jpg height=200 width=200></img></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#gender\-male&quot;}
+  (Session info: chrome=108.0.5359.99)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c490bc40dfc4c2681f1e5699fca8c388, findElement {using=id, value=gender-male}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55243}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55243/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c490bc40dfc4c2681f1e5699fca8c388
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at com.nopcommerce.demo.utility.Utility.clickOnElement(Utility.java:51)
+	at com.nopcommerce.demo.pages.RegisterPage.fillAllMandatoryField(RegisterPage.java:57)
+	at com.nopcommerce.demo.testsuit.RegisterMenuTest.verifyUserShouldRegister(RegisterMenuTest.java:20)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace48071225", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace48071225'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#gender\-male&quot;}
+  (Session info: chrome=108.0.5359.99)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c490bc40dfc4c2681f1e5699fca8c388, findElement {using=id, value=gender-male}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55243}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55243/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c490bc40dfc4c2681f1e5699fca8c388
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at com.nopcommerce.demo.utility.Utility.clickOnElement(Utility.java:51)
+	at com.nopcommerce.demo.pages.RegisterPage.fillAllMandatoryField(RegisterPage.java:57)
+	at com.nopcommerce.demo.testsuit.RegisterMenuTest.verifyUserShouldRegister(RegisterMenuTest.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>60</td>
+<td>com.nopcommerce.demo.testsuit.RegisterMenuTest@1da51a35</td></tr>
+<tr>
+<td title='com.nopcommerce.demo.testsuit.ElectronicTest.verifyThatTheProductAddedSuccessfullyAndPlaceOrderSuccessfully()'><b>verifyThatTheProductAddedSuccessfullyAndPlaceOrderSuccessfully</b><br>Test class: com.nopcommerce.demo.testsuit.ElectronicTest<br/>
+<a href="#Output-1627496281" onClick='toggleBox("Output-1627496281", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1627496281" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1627496281">
+mouse hover to electronic page[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> link text: Electronics]<br/>
+click on cell phone page[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> link text: Cell phones]<br/>
+get text from cell phone[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //h1[contains(text(),'Cell phones')]]<br/>
+click on list [[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //a[contains(text(),'List')]]<br/>
+click o nokia lumia[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> link text: Nokia Lumia 1020]<br/>
+verify text nokia lumia[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //h1[contains(text(),'Nokia Lumia 1020')]]<br/>
+get text from electronic page[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> link text: Electronics]<br/>
+update qty[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: product_enteredQuantity_20]<br/>
+click on add to cart[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: add-to-cart-button-20]<br/>
+click on close message bar[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //span[@class='close']]<br/>
+click on go cart[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //button[contains(text(),'Go to cart')]]<br/>
+verify price[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //span[@class='value-summary']/strong]<br/>
+accept terms and condition[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: termsofservice]<br/>
+click on Checkout[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: checkout]<br/>
+verify welcome sign in message[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //h1[contains(text(),'Welcome, Please Sign In!')]]<br/>
+click on register link[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //button[contains(text(),'Register')]]<br/>
+Click on gender[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: gender-male]<br/>
+enter first name[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: FirstName]<br/>
+enter last Name[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: LastName]<br/>
+select birth day[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //select[@name='DateOfBirthDay']]<br/>
+select birth month[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //select[@name='DateOfBirthMonth']]<br/>
+select birth Year[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //select[@name='DateOfBirthYear']]<br/>
+enter email id[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: Email]<br/>
+enter company name[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: Company]<br/>
+enter password[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: Password]<br/>
+enter confirm password[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: ConfirmPassword]<br/>
+click on register link[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: register-button]<br/>
+verify register complete[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //div[@class='result']]<br/>
+click on continue after register complete[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //div[@class='buttons']/a]<br/>
+verify shopping cart[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //h1[contains(text(),'Shopping cart')]]<br/>
+click on terms and condition[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: termsofservice]<br/>
+click on check out[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: checkout]<br/>
+Mandatory name [[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: BillingNewAddress_FirstName]<br/>
+Mandatory  LAst name [[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: BillingNewAddress_LastName]<br/>
+Mandatory Email [[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: BillingNewAddress_Email]<br/>
+Mandatory Country[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: BillingNewAddress_CountryId]<br/>
+Mandatory State [[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: BillingNewAddress_StateProvinceId]<br/>
+Mandatory City [[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: BillingNewAddress_City]<br/>
+Mandatory Address[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> xpath: //input[@id='BillingNewAddress_Address1']]<br/>
+Mandatory Postal Code[[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: BillingNewAddress_ZipPostalCode]<br/>
+Mandatory Phone number [[ChromeDriver: chrome on WINDOWS (259bf754f7ba3046433b48aa204671fa)] -> id: BillingNewAddress_PhoneNumber]<br/>
+Click on continue Proxy element for: DefaultElementLocator 'By.name: BillingNewAddress_PhoneNumber'<br/>
+Click to see screenshot<br/>
+<a target = "_blank" href=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/verifyThatTheProductAddedSuccessfullyAndPlaceOrderSuccessfullyWed_Dec_14_00_24_22_GMT_2022.jpg>Screenshot</a><br/>
+<br><br/>
+<br><br/>
+<a target = "_blank" href=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/verifyThatTheProductAddedSuccessfullyAndPlaceOrderSuccessfullyWed_Dec_14_00_24_22_GMT_2022.jpg><img src=C:\Users\viral\IdeaProjects\nopcommerce-pagefactory/test-output/html/verifyThatTheProductAddedSuccessfullyAndPlaceOrderSuccessfullyWed_Dec_14_00_24_22_GMT_2022.jpg height=200 width=200></img></a><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;BillingNewAddress_PhoneNumber&apos;]&quot;}
+  (Session info: chrome=108.0.5359.99)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [259bf754f7ba3046433b48aa204671fa, findElement {using=name, value=BillingNewAddress_PhoneNumber}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55165/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 259bf754f7ba3046433b48aa204671fa
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at com.nopcommerce.demo.utility.Utility.clickOnElement(Utility.java:51)
+	at com.nopcommerce.demo.pages.ComputerPage.fillAllMandatoryField(ComputerPage.java:387)
+	at com.nopcommerce.demo.testsuit.ElectronicTest.verifyThatTheProductAddedSuccessfullyAndPlaceOrderSuccessfully(ElectronicTest.java:47)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1627496281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1627496281'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;BillingNewAddress_PhoneNumber&apos;]&quot;}
+  (Session info: chrome=108.0.5359.99)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [259bf754f7ba3046433b48aa204671fa, findElement {using=name, value=BillingNewAddress_PhoneNumber}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\viral\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55165}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55165/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 259bf754f7ba3046433b48aa204671fa
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at com.nopcommerce.demo.utility.Utility.clickOnElement(Utility.java:51)
+	at com.nopcommerce.demo.pages.ComputerPage.fillAllMandatoryField(ComputerPage.java:387)
+	at com.nopcommerce.demo.testsuit.ElectronicTest.verifyThatTheProductAddedSuccessfullyAndPlaceOrderSuccessfully(ElectronicTest.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.runSuites(TestNG.java:1092)
+	at org.testng.TestNG.run(TestNG.java:1060)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>70</td>
+<td>com.nopcommerce.demo.testsuit.ElectronicTest@543788f3</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nopcommerce.demo.testsuit.LoginTest.verifyErrorMessageWithInvalidCredential()'><b>verifyErrorMessageWithInvalidCredential</b><br>Test class: com.nopcommerce.demo.testsuit.LoginTest<br/>
+<a href="#Output-532297836" onClick='toggleBox("Output-532297836", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-532297836" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-532297836">
+click on login link[[ChromeDriver: chrome on WINDOWS (0950250e770515e76900842c12811602)] -> link text: Log in]<br/>
+enter email [[ChromeDriver: chrome on WINDOWS (0950250e770515e76900842c12811602)] -> id: Email]<br/>
+enter password [[ChromeDriver: chrome on WINDOWS (0950250e770515e76900842c12811602)] -> name: Password]<br/>
+click on login button[[ChromeDriver: chrome on WINDOWS (0950250e770515e76900842c12811602)] -> xpath: //button[contains(text(),'Log in')]]<br/>
+verify error message[[ChromeDriver: chrome on WINDOWS (0950250e770515e76900842c12811602)] -> xpath: //div[@class='message-error validation-summary-errors']]<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.nopcommerce.demo.testsuit.LoginTest@6d3af739</td></tr>
+</table><p>
+</body>
+</html>
